@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const renderHTML = require('./src/renderhtml');
 let employeeList = [];
 
 const addEmployee = function () {
@@ -132,9 +132,10 @@ const addEmployee = function () {
 			if (confirmAdd) return addEmployee();
 			else {
 				console.log(employeeList);
-				// renderHTML(employeeList);
+				renderHTML(employeeList);
 			}
-		});
+		})
+		.catch(err => console.log(err));
 };
 
 addEmployee();
