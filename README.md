@@ -17,3 +17,5 @@ Navigate in the command line to the root directory of the package and run `node 
 To use the program, simply answer the questions that are presented regarding the employee. The first question will ask whether you wish to add an engineer, intern, or manager. The final question is different for each type of employee.
 
 When you are finished adding new employees, a new file `index.html` will be generated within the `dist` directory. To streamline the application's output, all CSS rules are placed within the HTML file's header.
+
+https://www.youtube.com/watch?v=VE_Imax9SZQ
