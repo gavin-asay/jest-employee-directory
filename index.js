@@ -131,7 +131,6 @@ const addEmployee = function () {
 		.then(({ confirmAdd }) => {
 			if (confirmAdd) return addEmployee();
 			else {
-				console.log(employeeList);
 				renderHTML(employeeList);
 			}
 		})

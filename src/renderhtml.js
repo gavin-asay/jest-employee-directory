@@ -12,10 +12,8 @@ const writeHTML = data => {
             <h3>${role}</h3>
         </div>
         <div class="card-body">
-            <ul>
-                <li>Email: ${email}</li>
-                <li>GitHub Username: ${unique.github}</li>
-            </ul>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>GitHub Username:</strong> ${unique.github}</p>
         </div>
     </div>`,
 				Intern: `
@@ -25,10 +23,8 @@ const writeHTML = data => {
             <h3>${role}</h3>
         </div>
         <div class="card-body">
-            <ul>
-                <li>Email: ${email}</li>
-                <li>School: ${unique.school}</li>
-            </ul>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>School:</strong> ${unique.school}</p>
         </div>
     </div>`,
 				Manager: `
@@ -38,10 +34,8 @@ const writeHTML = data => {
             <h3>${role}</h3>
         </div>
         <div class="card-body">
-            <ul>
-                <li>Email: ${email}</li>
-                <li>Office Number: ${unique.office}</li>
-            </ul>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Office Number:</strong> ${unique.office}</p>
         </div>
     </div>`,
 			};
@@ -57,6 +51,66 @@ const writeHTML = data => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
     <title>Jest Employee Directory</title>
+    <style>
+html {
+    background-color: #3ac0ff;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #2482ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    line-height: 3;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    height: 100%;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.6);
+    min-width: 235px;
+    width: max-content;
+    margin: 10px;
+}
+
+.card-header {
+    background-color: rgba(255,255,255,0.6);
+    padding: 2px 10px;
+    border-radius: 15px;
+}
+
+.card-header span {
+    font-size: 0.5em;
+    margin-left: 30px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body ul {
+    padding-left: 0;
+}
+
+p {
+    margin: 4px;
+}
+</style>
 </head>
 <body>
     <header>
