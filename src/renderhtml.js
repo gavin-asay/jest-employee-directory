@@ -3,7 +3,9 @@ const fs = require('fs');
 const writeHTML = data => {
 	const employeeCards = data
 		.map(employee => {
+			// ...unique contains only one property regardless of subclass, but the rest notation allows us to destructure that property regardless of its name
 			({ employeeName, id, email, role, ...unique } = employee);
+			// declaring all of these lengthy template literal variables within the map method may be awkward, but it was a solution to writeHTML() throwing ReferenceErrors
 			const cardTemplate = {
 				Engineer: `
     <div class="card ${role}">
@@ -43,6 +45,7 @@ const writeHTML = data => {
 		})
 		.join('\n');
 
+	// CSS for HTML output is placed in the head, so we only need to write one new file
 	const mainTemplate = `
 <!DOCTYPE html>
 <html lang="en">

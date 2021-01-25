@@ -67,6 +67,7 @@ const addEmployee = function () {
 						return false;
 					}
 				},
+				// when methods prompt one unique question per class type
 				when: ({ role }) => {
 					if (role === 'Manager') return true;
 					else return false;
